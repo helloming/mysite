@@ -1,0 +1,16 @@
+<html>
+<head>the search_result.html</head>
+<body>
+	<p>you searh for :{{query}}</p>
+{%if  books %}
+    <p>you found {{books|length}} book {{books|pluralize}}.</p>
+    <ul>
+    	{% for book in books %}
+    	<li>the book is {{book.title}}</li>
+    	{% endfor %}
+    </ul>
+{% else %}
+    <p>we do not have this book</p>
+{% endif %}
+</body>
+</html>
